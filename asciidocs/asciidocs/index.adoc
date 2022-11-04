@@ -1,4 +1,4 @@
-= Index page
+= Index page Pascal Goldmann
 ifndef::imagesdir[:imagesdir: images]
 
 image::img.png[]
