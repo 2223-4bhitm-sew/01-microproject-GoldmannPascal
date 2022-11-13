@@ -2,9 +2,13 @@ package at.htl.entity;
 
 import javax.persistence.*;
 
+@NamedQuery(
+        name = "Customer.findAll",
+        query = "select c from Customer c"
+)
 
 @Entity
-@Table(name = "MY_PERSON")
+@Table(name = "CUSTOMER")
 public class Customer {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
