@@ -4,6 +4,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/asciidocs/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/barbershop/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/barbershop/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
