@@ -1,4 +1,6 @@
-= Index page Pascal Goldmann
+= Microproject - Pascal Goldmann
 ifndef::imagesdir[:imagesdir: images]
+
+=
 
 image::img.png[]

@@ -1,0 +1,27 @@
+@startuml
+
+top to bottom direction
+
+
+class BarberShop
+
+class Service
+
+class Customer
+
+class Hairdresser
+
+class Appointment
+
+BarberShop "1"--"*" Hairdresser : employs >
+BarberShop "1"--"*" Customer : has >
+BarberShop "1"--"*" Service : provides >
+Customer "1"--"*" Appointment : books >
+Hairdresser "1"--"*" Appointment : has >
+Appointment "*"--"1" Service : has >
+Hairdresser "1"--"1" Service
+
+(Hairdresser, Service) .. Service_Hairdresser
+
+
+@enduml
