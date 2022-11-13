@@ -1,6 +1,8 @@
-= Microproject - Pascal Goldmann
+= BarberShop - Pascal Goldmann
 ifndef::imagesdir[:imagesdir: images]
 
-=
-
-image::img.png[]
+== Class Diagramm
+[plantuml, png]
+----
+include::plantuml/BarberShop.puml[]
+----
