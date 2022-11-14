@@ -51,7 +51,7 @@ public class CustomerResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response delete(Customer customer) {
         if(customers.size() > 0) {
-            customers.remove(0);
+            customers.remove(customer);
         }
         return Response.noContent().build();
     }

@@ -26,7 +26,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/customer
+DELETE http://localhost:8080/api/customer
 Content-Type: application/json
 
 {
