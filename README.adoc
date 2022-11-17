@@ -20,3 +20,7 @@ image::https://www.plantuml.com/plantuml/png/TSuzQaCn30VmNQSGdjhG1B9sA6cxTCy1Yj-
 
 Funktionalitäten wurden hinzugefügt.
 
+== README.md 17.11
+
+README.md wurde zu README.adoc umgeändert.
+
