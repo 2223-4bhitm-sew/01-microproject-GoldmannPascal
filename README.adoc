@@ -14,7 +14,7 @@ Barbershop, wo Rechnungen und Termine von Kunden eingesehen werden können.
 
 == Class Diagramm
 
-image::https://www.plantuml.com/plantuml/png/TSuzQaCn30VmNQSGdjhG1B9sA6cxTCy1Yj-p8AQsPMIzG6_VU10sDDcilt_wE3NrebjEe5nH6HTMvOmX2gqQkG30cdnh-E5b8JbVk5fo9hd6bQpyt9fo9h7woqS9GgsDwBrMZaKp5GKO0z4TtNxlTcxkmLUaN1F_DdoxPsrVXnV_0DcDDrE5hp5GXzOvs7JOZIxCFzsDQnvGspndRjVXSQmsz7_QG01Fq_UBnSzuEDZxUm9meXAsdFu0[]
+image::https://www.plantuml.com/plantuml/png/HOyn3iCW34Ltdy9Yh9GXQuOgUxUg5o1W9KZ1H62wLBrxdPOqdZ3lyx378ZPBZIk0f0qbuPH4KaGVCZa9YG70hROKl9DRkFACBq2jBLCey3xehRAdXfufiutqFRFLLqSpKt7BgXvfxLIp56zrWDFqe1m3DzMVmUy3qvkkCnTpf0QSgkhm2kr2cGPwSuuxu6Btm5uZiTTbFm00[]
 
 == Crud Funktionalitäten 14.11
 
