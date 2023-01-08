@@ -6,6 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/asciidocs/dist" />
       <excludeFolder url="file://$MODULE_DIR$/backend/barbershop/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/backend/barbershop/target" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/barbershop/db-postgres" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

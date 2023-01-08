@@ -3,25 +3,25 @@
 top to bottom direction
 
 
-class BarberShop
+class Rechnung {
+    preis
+}
 
-class Service
+class Kunde {
+    vorname
+    nachname
+    geschlecht
+}
 
-class Customer
+class Termin {
+    datum
+}
 
-class Hairdresser
 
-class Appointment
+Kunde "1"--"*" Termin : bucht >
+Termin "*"--"1" Rechnung : hat >
 
-BarberShop "1"--"*" Hairdresser : employs >
-BarberShop "1"--"*" Customer : has >
-BarberShop "1"--"*" Service : provides >
-Customer "1"--"*" Appointment : books >
-Hairdresser "1"--"*" Appointment : has >
-Appointment "*"--"1" Service : has >
-Hairdresser "1"--"1" Service
 
-(Hairdresser, Service) .. Service_Hairdresser
 
 
 @enduml

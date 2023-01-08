@@ -1,8 +1,72 @@
 = BarberShop - Pascal Goldmann
 ifndef::imagesdir[:imagesdir: images]
 
+== Beschreibung
+
+* Pascal Goldmann
+* 4BHITM
+* Microprojekt
+
+
+== Barbershop
+
+Barbershop, wo Rechnungen und Termine von Kunden eingesehen werden können.
+
 == Class Diagramm
 [plantuml, png]
 ----
 include::plantuml/BarberShop.puml[]
+----
+
+== Crud Funktionalitäten 14.11
+
+Funktionalitäten wurden hinzugefügt.
+
+== README.md 17.11
+
+README.md wurde zu README.adoc umgeändert.
+
+[plantuml, uscase, svg]
+----
+
+@startuml
+left to right direction
+actor "Schüler" as sh
+actor "Jury Mitglied" as j
+actor "Admin" as a
+
+rectangle Yaec-Abgabesystem {
+  usecase "Projekt einreichen" as UC1
+  usecase "Login" as UC2
+usecase "Teammitglieder hinzufügen" as ext1
+usecase "Dateien auswählen" as ext2
+usecase "Registrieren" as ext3
+
+usecase "Projekt bewerten" as UC3
+usecase "Projekte einsehen" as ext4
+
+usecase "benutzer verwalten" as UC4
+usecase "Jury Mitglieder hinzufügen" as ext5
+
+
+}
+sh --> UC1
+sh --> UC2
+UC1 .> ext1:extends
+ext1 .> ext2:extends
+UC2 .> ext3:extends
+
+j--> UC2
+UC3<--j
+UC3 .> ext4:extends
+
+UC4<--a
+UC4 .> ext5:extends
+
+
+
+
+
+
+@enduml
 ----
