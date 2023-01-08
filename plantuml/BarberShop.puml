@@ -1,0 +1,28 @@
+@startuml
+
+top to bottom direction
+
+
+class Rechnung {
+    preis
+}
+
+class Kunde {
+    vorname
+    nachname
+    geschlecht
+    geburtsdatum
+}
+
+class Termin {
+    datum
+}
+
+
+Kunde "1"--"*" Termin : bucht >
+Termin "*"--"1" Rechnung : hat >
+
+
+
+
+@enduml
