@@ -11,6 +11,7 @@ class Kunde {
     vorname
     nachname
     geschlecht
+    geburtsdatum
 }
 
 class Termin {
