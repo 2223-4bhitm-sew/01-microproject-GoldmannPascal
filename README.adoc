@@ -1,0 +1,26 @@
+= BarberShop - Pascal Goldmann
+ifndef::imagesdir[:imagesdir: images]
+
+== Beschreibung
+
+* Pascal Goldmann
+* 4BHITM
+* Microprojekt
+
+
+== Barbershop
+
+Barbershop, wo Rechnungen und Termine von Kunden eingesehen werden können.
+
+== Class Diagramm
+
+image::https://www.plantuml.com/plantuml/png/TSuzQaCn30VmNQSGdjhG1B9sA6cxTCy1Yj-p8AQsPMIzG6_VU10sDDcilt_wE3NrebjEe5nH6HTMvOmX2gqQkG30cdnh-E5b8JbVk5fo9hd6bQpyt9fo9h7woqS9GgsDwBrMZaKp5GKO0z4TtNxlTcxkmLUaN1F_DdoxPsrVXnV_0DcDDrE5hp5GXzOvs7JOZIxCFzsDQnvGspndRjVXSQmsz7_QG01Fq_UBnSzuEDZxUm9meXAsdFu0[]
+
+== Crud Funktionalitäten 14.11
+
+Funktionalitäten wurden hinzugefügt.
+
+== README.md 17.11
+
+README.md wurde zu README.adoc umgeändert.
+
