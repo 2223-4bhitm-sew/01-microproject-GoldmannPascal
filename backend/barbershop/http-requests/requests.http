@@ -8,8 +8,7 @@ Content-Type: application/json
 {
   "firstName": "Leon",
   "lastName": "Huber",
-  "phoneNumber": "06608649288",
-  "email": "leon187@gmail.com"
+  "sex": "M"
 }
 
 ###
@@ -20,20 +19,11 @@ Content-Type: application/json
 {
   "firstName": "Sascha",
   "lastName": "Spindler",
-  "phoneNumber": "06708942473",
-  "email": "s.spindler@outlook.com"
+  "sex": "M"
 }
 
 ###
 
-DELETE http://localhost:8080/api/customer
-Content-Type: application/json
-
-{
-  "firstName": "Sascha",
-  "lastName": "Spindler",
-  "phoneNumber": "06708942473",
-  "email": "s.spindler@outlook.com"
-}
-
+DELETE http://localhost:8080/api/customer/1
+´
 ###

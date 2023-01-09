@@ -2,39 +2,24 @@ package at.htl.entity;
 
 import javax.persistence.*;
 
-@NamedQuery(
-        name = "Customer.findAll",
-        query = "select c from Customer c"
-)
-
 @Entity
-@Table(name = "CUSTOMER")
 public class Customer {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "C_ID")
     private Long id;
 
-    @Column(name = "C_FIRST_NAME")
     private String firstName;
-
-    @Column(name="C_LAST_NAME")
     private String lastName;
+    private String sex;
 
-    @Column(name="C_PHONENUMBER")
-    private String phoneNumber;
-
-    @Column(name="C_EMAIL")
-    private String email;
-
-    public Customer() {
-    }
-
-    public Customer(String firstName, String lastName, String phoneNumber, String email) {
+    public Customer(String firstName, String lastName, String sex) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+        this.sex = sex;
+    }
+
+    public Customer() {
+
     }
 
     //<editor-fold desc="Getter&Setter">
@@ -62,26 +47,18 @@ public class Customer {
         this.lastName = lastName;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getSex() {
+        return sex;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
     //</editor-fold>
-
 
     @Override
     public String toString() {
-        return String.format("%s %s, Email: %s, Phonenumber: %s", firstName, lastName, email, phoneNumber);
+        return String.format("%s %s, Sex: %s", firstName, lastName, sex);
     }
 }

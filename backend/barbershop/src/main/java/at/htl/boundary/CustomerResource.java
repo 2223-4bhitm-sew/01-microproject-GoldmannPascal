@@ -16,43 +16,47 @@ import java.util.LinkedList;
 import java.util.List;
 
 @Path("/customer")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class CustomerResource {
-
-    @Inject
-    Logger logger;
 
     @Inject
     CustomerRepository customerRepository;
 
-    private List<Customer> customers = new LinkedList<>();
-
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<Customer> findAll(){
-        return customerRepository.findAll();
+        return customerRepository.findAll().list();
     }
 
     @POST
     @Transactional
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response create(Customer customer, @Context UriInfo uriInfo) throws Exception {
-        Customer saved = customerRepository.save(customer);
-        customers.add(customer);
-        logger.info(customer.getLastName() + " wird gespeichert");
-        URI location = uriInfo
-                .getAbsolutePathBuilder()
-                .path(saved.getId().toString())
-                .build();
-        return Response.created(location).build();
+    public Response create(Customer customer) throws Exception {
+        customerRepository.persist(customer);
+        return Response.created(URI.create("/customer/"+customer.getId())).build();
     }
 
+    @PUT
+    @Path("/{id}")
+    @Transactional
+    public Customer update(@PathParam("id") Long id, Customer customer){
+        var entity = customerRepository.findById(id);
+        if (entity == null) {
+            throw new NotFoundException();
+        }
+        entity.setFirstName(customer.getFirstName());
+        entity.setLastName(customer.getLastName());
+        entity.setSex(customer.getSex());
+        return  entity;
+    }
 
     @DELETE
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response delete(Customer customer) {
-        if(customers.size() > 0) {
-            customers.remove(customer);
+    @Path("/{id}")
+    @Transactional
+    public void delete(@PathParam("id") Long id){
+        var entity = customerRepository.findById(id);
+        if (entity == null) {
+            throw new NotFoundException();
         }
-        return Response.noContent().build();
+        customerRepository.delete(entity);
     }
 }
