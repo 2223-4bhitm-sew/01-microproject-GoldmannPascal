@@ -20,7 +20,7 @@ class Termin {
 
 
 Kunde "1"--"*" Termin : bucht >
-Termin "*"--"1" Rechnung : hat >
+Kunde "1"--"*" Rechnung : hat >
 
 
 

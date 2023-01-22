@@ -1,0 +1,12 @@
+GET http://localhost:8080/meeting
+
+###
+
+POST http://localhost:8080/meeting
+Content-Type: application/json
+
+{
+  "date": "17.10.2004"
+}
+
+###

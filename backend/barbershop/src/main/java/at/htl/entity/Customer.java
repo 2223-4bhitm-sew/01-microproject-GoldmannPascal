@@ -5,11 +5,15 @@ import javax.persistence.*;
 @Entity
 public class Customer {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "C_FIRSTNAME")
     private String firstName;
+    @Column(name = "C_LASTNAME")
     private String lastName;
+    @Column(name = "C_SEX")
     private String sex;
 
     public Customer(String firstName, String lastName, String sex) {

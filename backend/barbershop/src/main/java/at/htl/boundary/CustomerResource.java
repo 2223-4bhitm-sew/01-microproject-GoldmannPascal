@@ -2,17 +2,13 @@ package at.htl.boundary;
 
 import at.htl.control.CustomerRepository;
 import at.htl.entity.Customer;
-import org.jboss.logging.Logger;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
 import java.net.URI;
-import java.util.LinkedList;
 import java.util.List;
 
 @Path("/customer")

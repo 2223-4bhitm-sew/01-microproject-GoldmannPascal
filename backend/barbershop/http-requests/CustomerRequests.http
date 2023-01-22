@@ -1,8 +1,8 @@
-GET http://localhost:8080/api/customer
+GET http://localhost:8080/customer
 
 ###
 
-POST http://localhost:8080/api/customer
+POST http://localhost:8080/customer
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/api/customer
+POST http://localhost:8080/customer
 Content-Type: application/json
 
 {
@@ -24,6 +24,5 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8080/api/customer/1
-´
+DELETE http://localhost:8080/customer/2
 ###
