@@ -45,7 +45,7 @@ public class InvoiceResource {
     @Transactional
     public Response create(Invoice invoice, @Context UriInfo uriInfo) {
         if (customerRepository.findById(invoice.getCustomer().getId()) == null){
-            logger.error("customer not found");
+            logger.error("Customer not found");
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         invoiceRepository.persist(invoice);

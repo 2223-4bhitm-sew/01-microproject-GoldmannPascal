@@ -6,7 +6,26 @@ POST http://localhost:8080/meeting
 Content-Type: application/json
 
 {
-  "date": "17.10.2004"
+  "meetingDate": "2023-01-20",
+  "customer": {
+    "id": 1
+  }
 }
 
 ###
+
+POST http://localhost:8080/meeting
+Content-Type: application/json
+
+{
+  "meetingDate": "2023-01-25",
+  "customer": {
+    "id": 2
+  }
+}
+
+###
+
+DELETE http://localhost:8080/meeting/1
+
+### 

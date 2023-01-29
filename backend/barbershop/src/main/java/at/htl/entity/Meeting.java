@@ -15,7 +15,7 @@ public class Meeting {
     private Customer customer;
 
     @Column(name = "M_DATE")
-    private Date date;
+    private Date meetingDate;
 
     public Long getId() {
         return id;
@@ -25,12 +25,12 @@ public class Meeting {
         this.id = id;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getMeetingDate() {
+        return meetingDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setMeetingDate(Date meetingDate) {
+        this.meetingDate = meetingDate;
     }
 
     public Customer getCustomer() {

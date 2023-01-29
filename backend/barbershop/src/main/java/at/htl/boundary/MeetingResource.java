@@ -44,7 +44,7 @@ public class MeetingResource {
     @Transactional
     public Response create(Meeting meeting, @Context UriInfo uriInfo) {
         if (customerRepository.findById(meeting.getCustomer().getId()) == null){
-            logger.error("customer not found");
+            logger.error("Customer not found");
             return Response.status(Response.Status.NOT_FOUND).build();
         }
         meetingRepository.persist(meeting);
@@ -58,12 +58,12 @@ public class MeetingResource {
     public Meeting update(@PathParam("id") Long id, Meeting meeting) {
         Meeting entity = meetingRepository.findById(id);
         if (entity == null) {
-            logger.error("Invoice not found: " + id);
+            logger.error("Meeting not found: " + id);
             throw new NotFoundException();
         }
-        entity.setDate(meeting.getDate());
+        entity.setMeetingDate(meeting.getMeetingDate());
         meeting.setCustomer(meeting.getCustomer());
-        logger.info("Invoice updated: " + entity.getId());
+        logger.info("Meeting updated: " + entity.getId());
         return entity;
     }
 
